@@ -26,9 +26,10 @@ async function Cep(request, response) {
   const clientIp =
     request.headers['x-forwarded-for'] || request.connection.remoteAddress;
 
+  // eslint-disable-next-line no-console
   console.log({
     url: request.url,
-    clientIp: clientIp,
+    clientIp,
   });
 
   response.setHeader('Cache-Control', CACHE_CONTROL_HEADER_VALUE);

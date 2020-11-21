@@ -1,11 +1,15 @@
 const axios = require('axios');
 
 const createServer = require('./helpers/server.js');
+
 const server = createServer();
 
 const scenariosDdd = {
+  // eslint-disable-next-line global-require
   sucess: require('./helpers/scenarios/ddd/success'),
+  // eslint-disable-next-line global-require
   inexistent: require('./helpers/scenarios/ddd/inexistent'),
+  // eslint-disable-next-line global-require
   incorrect: require('./helpers/scenarios/ddd/incorrect'),
 };
 
